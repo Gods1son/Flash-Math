@@ -1,9 +1,11 @@
 <html>
 	<head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="stylesheet" href="jquery-ui.css">
         <script src="jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script src="index.js"></script>
         <script src="popper.min.js"></script>
         <script src="bootstrap.min.js"></script>
@@ -33,7 +35,7 @@
             Settings
         </div>
             
-        <div class="settingsPage">
+        <div class="settingsPage pt-5">
              <div class="row">
                 <div class="col-12 text-center mb-3">
                         <span class="scoreLabel">Best Score: </span>
@@ -75,7 +77,10 @@
                         <option value="8000">8 seconds</option>
                     </select>
                 </div>
-                    
+                  
+                <div id="closeSettings" class="col-12 text-center mt-5" onclick="showSettings()">
+                    Close
+                </div>
             </div>
         </div>
            
@@ -107,8 +112,12 @@
         
     </div>   
         <div id="buttonBoard" class="row">
-            <div class="col-12 text-center">
+            <div class="col-7 text-right">
                 <button id="bringCards" onclick="getCards(false)" class="playButton">Start / Show New Cards</button>
+                
+            </div>
+            <div class="col-5 text-left">
+                
                 <button id="showCards" onclick="showCards()" class="playButton">Show Cards Again</button>
             </div>
 
