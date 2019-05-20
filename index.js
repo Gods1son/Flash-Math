@@ -220,12 +220,12 @@ function createAnswers(value){
         class: 'answers',
         click: function () { findAnswer(this); }
         });
-        var but = $("<div class='answers'></div>");
-        $(but).text(optionShuff[i]);
+        //var but = $("<div class='answers'></div>");
+        /*$(but).text(optionShuff[i]);
         $(but).click(function(){
             findAnswer(this);
-        })
-       // var but = $("<button class='optionsButton'>" + optionShuff[i] + "</button");
+        })*/
+        //var but = $("<button class='optionsButton'>" + optionShuff[i] + "</button");
         $(".optionsHolder").append(but);
     }
     //var addTop = Math.floor($("#cardHolderOutside").height()) + 40;
