@@ -4,9 +4,10 @@
 }
 
 body{
-    overflow-x: hidden;
-    background: #f40000 !important;
-    /*background: url("simple.jpg");*/
+   overflow-x: hidden !important;
+    /*background: #f40000 !important;
+    background: url("simple.jpg");*/
+    overflow-y: hidden !important;
 }
 
 .arcDown{
@@ -44,11 +45,14 @@ body{
 }
 
 .arcUp{
-    height:25vh;
+    height: 23vh;
     border-top-left-radius:50%;
     border-top-right-radius:50%;
     background:  #191938; /*#25329B;*/
     position: relative;
+    width: 70%;
+    margin-left: 15%;
+    border-top: 2vh ridge #f40000;
 }
 
 .arcUp .par{
@@ -79,7 +83,7 @@ body{
     /*position: absolute;
     height: 100%;
     top: 0;*/
-    height: 50vh;
+    height: 60vh;
     display: table;
 }
 
