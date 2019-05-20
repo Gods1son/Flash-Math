@@ -13,6 +13,7 @@ var congratsMessages = ["YAAAAY!!!", "EXCELLENT", "CORRECT", "NICE"];
 var streakCount = 0;
 var bestStreak = 0;
 var minStreak = 5;
+var closeTheCards;
 /*global variables*/
 
 
@@ -258,7 +259,10 @@ function findAnswer(but){
     var opt = parseInt($(but).text());
     if(opt == finalAnswer){
         //alert("right");
-       
+        clearTimeout(closeTheCards);
+        //$(".cardHolder").removeClass("open");
+        clearInterval(tm);
+        
         //random congrats message
         var rand = Math.floor(Math.random() * congratsMessages.length);
         var msg = congratsMessages[rand];
@@ -332,8 +336,7 @@ function showCards(){
         //$(".card").eq(i).css("left", w + "px");
         $(".flipCard").eq(i).animate({left: w + "px"},secondsopener);
     }
-    //setTimeout(closeCards, seconds * $(".card").length);
-    //closeCards();
+    
     $(".cardHolder").addClass("open");
    
     //adjust parent height
@@ -343,18 +346,18 @@ function showCards(){
     //$(".cardHolder").css("height", h + "px");
     
     //adjust parent height
-    setTimeout(closeCards, secondsopener + 3000);
+    closeTheCards = setTimeout(closeCards, secondsopener + 3000);
     $("#showCards").attr("disabled","disabled");
     $("#bringCards").attr("disabled","disabled");
 }
 
 function closeCards(){
-    if($(".cardHolder").hasClass("open")){
+    //if($(".cardHolder").hasClass("open")){
         var seconds = parseInt($("#seconds").val());
         $(".flipCard").delay((seconds * $(".flipCard").length)).animate({left: "0px"},1000)
         timer = ((seconds * $(".flipCard").length) / 1000) + 1;
         tm = setInterval(countDown,1000);
-    }
+    //}
 }
 
 
