@@ -3,7 +3,8 @@ var maxCardAllowed = 10;
 var minCardAllowed = 3;
 var question = [];
 var finalAnswer = 0;
-var blueColor = ["#58C9C9","#BCF3F3","#84E0E0","#36AFAF","#1A9595","#58C9C9","#BCF3F3","#84E0E0","#36AFAF","#1A9595","#84E0E0"];
+//var blueColor = ["#58C9C9","#BCF3F3","#84E0E0","#36AFAF","#1A9595","#58C9C9","#BCF3F3","#84E0E0","#36AFAF","#1A9595","#84E0E0"];//
+var blueColor = ["#000022","#191938","#32324e","#f40000","#c10000","#58C9C9","#000022","#191938","#32324e","#f40000","#c10000","#0000220"];
 var bestScore = 0;
 var shownBestScore = false;
 var shownBestStreak = false;
@@ -97,8 +98,12 @@ function getCards(streak){
         zindex = i;
         var card = $("<div class='flipCard'></div");
         var spanSign = $("<span class='cardSignSpan'></span");
-        //var width = ($(".cardHolder").width() - (5 * number)) / number;
-        var width = 90 / number;
+        var width = ($(window).width() - (5.2 * number)) / number;
+        var showWidth = (width/$(window).width()) * 100;
+        var font = width/2 > 60 ? 60 : width/2;
+        //var width = ($(window).width() * 0.90) / number;
+
+        //var width = 90 / number;
         var topDim = (top * i) - 4;
         //var width = (maxWidth - (i * 10)) + 10;
         //var margin = (maxWidth-width)/2;
@@ -125,7 +130,7 @@ function getCards(streak){
         }
         
         //$(card).css({"width": width + "px", "margin-left": margin + "px", "top": top + "px", "z-index" : zindex});
-        $(card).css({"top": topDim + "px", "z-index" : zindex, "width" : width + "vw", "background-color" : blueColor[i]});
+        $(card).css({"top": topDim + "px", "z-index" : zindex, "width" : showWidth + "%", "font-size" : font + "px", "background-color" : blueColor[i]});
         $(".cardHolder").append(card);
     }
     calculate();
