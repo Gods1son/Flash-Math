@@ -12,6 +12,7 @@
         Gods1son
     </author>
     <content src="home.html" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
     <icon height="48" src="Images/android-icon-48x482.jpg" width="48"/>
     <icon height="48" platform="android" src="Images/android-icon-48x482.jpg" width="48"/>
     <icon height="48" platform="ios" src="Images/android-icon-48x482.jpg" width="48"/>
