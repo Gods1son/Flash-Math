@@ -97,7 +97,8 @@ function getCards(streak){
         zindex = i;
         var card = $("<div class='flipCard'></div");
         var spanSign = $("<span class='cardSignSpan'></span");
-        var width = ($(".cardHolder").width() - (5 * number)) / number;
+        //var width = ($(".cardHolder").width() - (5 * number)) / number;
+        var width = 90 / number;
         var topDim = (top * i) - 4;
         //var width = (maxWidth - (i * 10)) + 10;
         //var margin = (maxWidth-width)/2;
@@ -124,7 +125,7 @@ function getCards(streak){
         }
         
         //$(card).css({"width": width + "px", "margin-left": margin + "px", "top": top + "px", "z-index" : zindex});
-        $(card).css({"top": topDim + "px", "z-index" : zindex, "width" : width + "px", "background-color" : blueColor[i]});
+        $(card).css({"top": topDim + "px", "z-index" : zindex, "width" : width + "vw", "background-color" : blueColor[i]});
         $(".cardHolder").append(card);
     }
     calculate();
@@ -219,6 +220,11 @@ function createAnswers(value){
         class: 'answers',
         click: function () { findAnswer(this); }
         });
+        var but = $("<div class='answers'></div>");
+        $(but).text(optionShuff[i]);
+        $(but).click(function(){
+            findAnswer(this);
+        })
        // var but = $("<button class='optionsButton'>" + optionShuff[i] + "</button");
         $(".optionsHolder").append(but);
     }
