@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-body{
-    overflow: hidden;
+html, body{
+    overflow: hidden !important;
     /*background: url("simple.jpg");*/
     background-color: #FEF !important;
 }
@@ -59,13 +59,21 @@ body{
     color: white;
     height: 5vh;
     letter-spacing: 5px;
-    border-bottom: 3px ridge white;
+    /*border-bottom: 3px ridge white;*/
 }
 
 #choosegame{
     position: absolute;
     height: 100%;
     top: 0;
+}
+
+#closeSettings{
+    color: white;
+    font-weight: 600;
+    background: #191938;
+    font-size: 3vh;
+    letter-spacing: 5px;
 }
 
 .sliderCustom{
@@ -105,16 +113,15 @@ body{
 
 .settings{
     border: 2px groove red;
-    height: 4vh;
+    height: 5vh;
     color: white;
     font-weight: 800;
-    font-size: 2.5vh;
+    font-size: 3vh;
     background: #f40000;
     letter-spacing: 3px;
 }
 
 .settingsPage{
-    padding: 50px 0;
     border: 3px groove red;
     position: absolute;
     background: white;
@@ -255,7 +262,7 @@ body{
     text-align: center;
     margin: 1vh 10px;
     height: 5vh;
-    font-size: 2.2vh;
+    font-size: 2.1vh;
 }
 
 #timer{
@@ -278,7 +285,7 @@ body{
     display: table;
     font-size: 4em;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 2vh;
     -webkit-transition: all 5s ease;
   -moz-transition: all 5s ease;
   -o-transition: all 5s ease;
@@ -326,9 +333,10 @@ body{
 
 .answers{
     border-radius: 10px;
-    width: 15%;
+    width: 15vw;
     height: 90%;
-    font-size: 4vh;
+    font-size: 5vh;
+    float: left;
     font-weight: 600;
     margin: 0% 3px;
     background: #000022;
@@ -358,6 +366,7 @@ body{
 .optionsHolder{
     text-align: center;
     height: 10vh;
+    padding-left: 11.5vw;
 }
 
 .congratsHolder{
