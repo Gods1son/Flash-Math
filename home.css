@@ -197,7 +197,6 @@ body{
 }
 
 .chooseType{
-    border: 2px groove blue;
     cursor: pointer;
     border-radius: 30px;
     color: white;
