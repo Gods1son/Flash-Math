@@ -82,10 +82,14 @@ function showSettings(){
 
 function getCards(streak){
     //clear timer
-    if(tm != null){
+    clearTimeout(closeTheCards);
+        //$(".cardHolder").removeClass("open");
+    clearInterval(tm);
+    $("#timer").text("0");
+    /*if(tm != null){
         clearInterval(tm);
         $("#timer").text("0");
-       }
+       }*/
       
     $(".cardHolder").empty();
     //$(".cardHolder").animate({left: 0 + "%"},1000);
