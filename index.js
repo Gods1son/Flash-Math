@@ -33,8 +33,7 @@ $(document).ready(function () {
      
     //show range
     $("#number").text(minCardAllowed);
-    $("#showCards").attr("disabled","disabled");
-    //$("#bringCards").attr("disabled","disabled");
+    //$("#showCards").attr("disabled","disabled");
 
     //get bestScore
     if(localStorage.getItem("bestScore") == null){
@@ -348,7 +347,7 @@ function showCards(){
     //adjust parent height
     closeTheCards = setTimeout(closeCards, secondsopener + 3000);
     $("#showCards").attr("disabled","disabled");
-    $("#bringCards").attr("disabled","disabled");
+    //$("#bringCards").attr("disabled","disabled");
 }
 
 function closeCards(){
@@ -368,8 +367,8 @@ function middle(){
         mar = (mar/par) * 100;
        //$(".cardHolder").css("margin-left", mar + "%");
     $(".cardHolder").animate({left: mar + "%"},1000, function(){
-        $("#showCards").attr("disabled",false);
-        $("#bringCards").attr("disabled",false);
+        //$("#showCards").attr("disabled",false);
+        //$("#bringCards").attr("disabled",false);
     });
 }
 
@@ -380,7 +379,7 @@ function countDown(){
         //$("#showCards").attr("disabled",false);
         //setTimeout(middle, 4000);
        $("#showCards").attr("disabled",false);
-        $("#bringCards").attr("disabled",false);
+       // $("#bringCards").attr("disabled",false);
    }
     $("#timer").text(timer);
 }
