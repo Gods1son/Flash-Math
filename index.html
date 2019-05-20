@@ -1,0 +1,155 @@
+<html>
+	<head>
+    <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="jquery-ui.css">
+        <script src="jquery.min.js"></script>
+        <script src="index.js"></script>
+        <script src="popper.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="jquery-ui.js"></script>
+    </head>
+	<body>
+        <!--<div class="arcLeft"></div>
+        <div class="arcRight"></div>-->
+        
+        <div class="arcDown">
+        <div class="container-fluid" id="nickNameBoard">
+            <div class="row">
+                <div class="col-6 text-left">
+                    <span class="float-left pl-1">
+                        <a href="home.html" class="back">Home</a>
+                    </span>
+                </div>  
+                
+                <div class="col-6 text-right">
+                    <span id="welcomeName">Hi </span>
+                    <span id="nickname" class="text-capitalize font-weight-bold font-italic"></span>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-12 text-center settings" onclick="showSettings()">
+            Settings
+        </div>
+            
+        <div class="settingsPage">
+             <div class="row">
+                <div class="col-12 text-center mb-3">
+                        <span class="scoreLabel">Best Score: </span>
+                        <span id="bestScore" class="scoreLabel record">0</span>
+                 </div>   
+
+                <div class="col-12 text-center mt-3 mb-3">  
+                        <span class="scoreLabel">Best Streak: </span>
+                        <span id="bestStreak" class="scoreLabel record">0</span>
+                    
+                </div>
+                <div class="col-12">
+                    <div class="scoreLabel text-center">Number Range:
+                        <span id="low">0</span><span> - </span><span id="high">10</span>
+                    </div>
+                     
+                    <div id="slider-range" class="sliderCustom"></div>
+                    
+                    <div class="sliderCustom">
+                        <span id="lowest" class="float-left">0</span>
+                        <span id="highest" class="float-right">10</span>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-12 text-center mt-5">
+                    <div class="scoreLabel">Number of cards:</div>
+                    <button class="arrows" onclick="cardNumber('-')"><</button>
+                    <span id="number">0</span>
+                    <button class="arrows" onclick="cardNumber('+')">></button>
+                </div>
+                    
+                <div class="col-12 text-center mt-5">
+                    <div class="scoreLabel">Select Timer:</div>
+                    <select id="seconds">
+                        <option value="2000" selected>2 seconds</option>
+                        <option value="4000">4 seconds</option>
+                        <option value="6000">6 seconds</option>
+                        <option value="8000">8 seconds</option>
+                    </select>
+                </div>
+                    
+            </div>
+        </div>
+           
+        <div class="container-fluid">
+                <div class="col-12 text-center">
+                        <span class="scoreLabel scorer">Your Score: </span>
+                        <span id="score" class="scorer">0</span> 
+                        <span id="divider" class="scorer">/</span> 
+                        <span id="maxScore" class="scorer">0</span>             
+                </div>  
+            
+                <div class="col-12 text-center">
+                    <span class="scorer">Streak: </span>
+                    <span id="streakCount" class="scorer">0</span>
+                </div>
+            
+        </div>    
+            
+        <div class="container-fluid timerBoard">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <span class="scoreLabel text-white">Timer: </span>
+                    <span id="timer">0</span>
+                </div>  
+            </div>
+        </div>
+        </div>
+            
+        
+    </div>   
+        <div id="buttonBoard" class="row">
+            <div class="col-12 text-center">
+                <button id="bringCards" onclick="getCards(false)" class="playButton">Start / Show New Cards</button>
+                <button id="showCards" onclick="showCards()" class="playButton">Show Cards Again</button>
+            </div>
+
+        </div>
+
+       <div id="cardHolderOutside">
+            <div class="cardHolder">
+            </div>
+        </div>
+            
+            
+        <div class="congratsHolder">
+            <span id="congratsHolderMessage"></span>    
+        </div>    
+        <div class="optionsHolder"></div>
+        <div class="arcUp"></div>    
+            
+            <!-- Modal -->
+            <button type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#collectName" id="collectUserName">
+                Launch demo modal
+            </button>
+            
+<div class="modal fade" id="collectName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Enter a nickname</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+            <p>Type a nickname below</p>
+            <p><input type="text" id="myNickName"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="saveNickName" onclick="saveNickName()" class="btn btn-success">Save Nickname</button>
+      </div>
+    </div>
+  </div>
+</div>
+	</body>
+</html>

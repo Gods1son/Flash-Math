@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+        id="com.phonegap.FlashMath"
+        version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Flash Math</name>
+    <description>
+        This is a math game that improves calculation and retention
+    </description>
+    <author email="tolulopeibiyode@gmail.com" href="#">
+        Gods1son
+    </author>
+    <content src="home.html" />
+    <icon height="48" src="Images/android-icon-48x482.jpg" width="48"/>
+    <icon height="48" platform="android" src="Images/android-icon-48x482.jpg" width="48"/>
+    <icon height="48" platform="ios" src="Images/android-icon-48x482.jpg" width="48"/>
+    <icon height="48" platform="windows" src="Images/android-icon-48x482.jpg" width="48"/>
+    <!--<preference name="orientation" value="portrait"/>-->
+    <plugin name="cordova-plugin-dialogs" source="npm"/>
+    <plugin name="cordova-plugin-exitapp" source="npm"/>
+</widget>
