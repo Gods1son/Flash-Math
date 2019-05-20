@@ -4,7 +4,8 @@
 }
 
 html, body{
-    overflow: hidden !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
     /*background: url("simple.jpg");*/
     background-color: #FEF !important;
 }
@@ -283,7 +284,7 @@ html, body{
     box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.5); /*0141*/
     background: white;
     display: table;
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
     margin-top: 2vh;
     -webkit-transition: all 5s ease;
@@ -335,8 +336,7 @@ html, body{
     border-radius: 10px;
     width: 15vw;
     height: 90%;
-    font-size: 5vh;
-    float: left;
+    font-size: 4vh;
     font-weight: 600;
     margin: 0% 3px;
     background: #000022;
@@ -366,7 +366,6 @@ html, body{
 .optionsHolder{
     text-align: center;
     height: 10vh;
-    padding-left: 11.5vw;
 }
 
 .congratsHolder{
